@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Beetle",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.beetle",
+				"match": "\\b(import|func|let|if|else|while|loop|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.beetle",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.beetle",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "main.bt"
+}

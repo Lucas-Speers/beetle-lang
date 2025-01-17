@@ -1,0 +1,25 @@
+{
+  "name": "beetle-lang",
+  "displayName": "Beetle Lang",
+  "description": "Syntax highlighting for Beetle",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "beetle",
+      "aliases": ["Beetle", "beetle"],
+      "extensions": [".bt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "beetle",
+      "scopeName": "main.bt",
+      "path": "./syntaxes/beetle.tmLanguage.json"
+    }]
+  }
+}
