@@ -3,17 +3,45 @@
 	"name": "Beetle",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
+			"include": "#constants"
+		},
+		{
 			"include": "#strings"
+		},
+		{
+			"include": "#builtin"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"comments": {
 			"patterns": [{
-				"name": "keyword.control.beetle",
-				"match": "\\b(import|func|let|if|else|while|loop|return)\\b"
+				"name": "comment.line.beetle",
+				"begin": "//",
+				"end": "$"
+			}]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.beetle",
+					"match": "\\b(import|func|let|if|else|while|loop|return)\\b"
+				},
+				{
+					"name": "keyword.operator.beetle",
+					"match": "(\\+|-|\\*|/|\\=\\=)"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.beetle",
+				"match": "\\b(true|false|none)\\b"
 			}]
 		},
 		"strings": {
@@ -26,7 +54,13 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"builtin": {
+			"patterns": [{
+				"name": "support.function.builtin.beetle",
+				"match": "\\b(print|input|exit)\\b"
+			}]
 		}
 	},
-	"scopeName": "main.bt"
+	"scopeName": "text.bt"
 }

@@ -18,7 +18,7 @@
     }],
     "grammars": [{
       "language": "beetle",
-      "scopeName": "main.bt",
+      "scopeName": "text.bt",
       "path": "./syntaxes/beetle.tmLanguage.json"
     }]
   }
